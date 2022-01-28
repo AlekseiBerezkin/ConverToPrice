@@ -48,7 +48,7 @@ namespace ConverToPrice
                                     }
                                     catch (Exception ex)
                                     {
-                                        inputItem._4_Mrk = 0;
+                                        inputItem._4_Mrk = -1;
                                         inputItemList.Add(inputItem);
                                     }
 
