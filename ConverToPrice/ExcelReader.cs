@@ -22,7 +22,7 @@ namespace ConverToPrice
             {
                 foreach (ExcelWorksheet worksheet in excelPackage.Workbook.Worksheets)
                 {
-                    if (worksheet.Name.ToLower() == "единицы" || worksheet.Name.ToLower() == "комплекты" || worksheet.Name.ToLower() == "wb")
+                    if (worksheet.Name.ToLower() == "ozon" || worksheet.Name.ToLower() == "комплекты" || worksheet.Name.ToLower() == "wb")
                     {
                         for (int Row = 2; Row <= worksheet.Dimension.End.Row; ++Row)
                         {
@@ -40,7 +40,7 @@ namespace ConverToPrice
                                     double result;
                                     try
                                     {
-                                        if (double.TryParse(worksheet.Cells[Row, 18].Value.ToString(), out result))
+                                        if (double.TryParse(worksheet.Cells[Row, 19].Value.ToString(), out result))
                                         {
                                             inputItem._4_Mrk = result;
                                             inputItemList.Add(inputItem);
